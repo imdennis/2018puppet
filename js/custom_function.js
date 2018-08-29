@@ -17,7 +17,8 @@ function getPageName(){
     if(jQuery.inArray(page, arr)!=-1){
         return page
     }else{
-        return 'err.html'
+        console.log('page='+page)
+        return arr[0]
     }
 
 }
