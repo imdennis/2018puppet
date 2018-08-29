@@ -1,13 +1,28 @@
-//imgEdit 隱藏網址參數
-function hideParams(){
+// //imgEdit 隱藏網址參數
+// function hideParams(){
+//     var url = location.href; //get href
+//     var params=(new URL(url)).searchParams;
+//     window.history.replaceState({path:params.get('URL')},'',params.get('URL'));
+// }
+
+function setPageName(pageName){
+    var newPath = document.location.origin+'/?page='+pageName
+    window.history.replaceState({path: newPath},'',newPath);
+}
+
+function getPageName(){
     var url = location.href; //get href
-    var params=(new URL(url)).searchParams;
-    window.history.replaceState({path:params.get('URL')},'',params.get('URL'));
+    var page=(new URL(url)).searchParams.get('page');
+    var arr = ['page1.html','page2.html','page3.html','page4.html','err.html']
+    if(jQuery.inArray(page, arr)!=-1){
+        return page
+    }else{
+        return 'err.html'
+    }
+
 }
 
-function setPageParams(){
 
-}
 
 function testDoc(){
     console.log("document.URL : "+document.URL);
