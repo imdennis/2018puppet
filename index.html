@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/mycss.css">
+    <script src="js/jquery.min.js"></script>
+    <title>我的网站</title>
+    <script>
+        $(document).ready(function () {
+            window.onload = ajaxLoad("home.html", "myCnt");
+            $("ul li").click(function () {
+                $(this).children("a").addClass("active");
+                if ($(this).siblings("li").children("a").hasClass("active")) {
+                    $(this).siblings("li").children("a").removeClass("active");
+                }
+            });
+        });
+        function ajaxLoad(myUl, myId) {
+            var xmlhttp;
+            if (window.XMLHttpRequest) {
+                // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+                xmlhttp = new XMLHttpRequest();
+            }
+            else {
+                // IE6, IE5 浏览器执行代码
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById(myId).innerHTML = xmlhttp.responseText;
+                    if (myId == "myPopup") {
+                        document.getElementById("myPopup").style.display = 'block';
+                    }
+                }
+            }
+            xmlhttp.open("GET", myUl, true);
+            xmlhttp.send();
+        }
+        function myClose() {
+            document.getElementById("myPopup").style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="myPopup" class="myPopup">
+    </div>
+    <header>
+        <h1>
+            这是我的网页头部
+        </h1>
+    </header>
+    <article>
+        <div class="content">
+            <menu>
+                <ul>
+                    <li><a href="#" onclick="ajaxLoad('page1.html','myCnt')">载入表格页面</a></li>
+                    <li><a href="#" onclick="ajaxLoad('page2.html','myCnt')">载入表单页面</a></li>
+                    <li><a href="#" onclick="ajaxLoad('page3.html','myCnt')">带按钮可弹出页面</a></li>
+                    <li><a href="#" onclick="ajaxLoad('page4.html','myCnt')">任意载入的页面</a></li>
+                </ul>
+            </menu>
+            <section id="myCnt">
+            </section>
+        </div>
+    </article>
+    <footer>
+        <h1>
+            这是我的网页尾部
+        </h1>
+    </footer>
+</body>
+
+</html>
