@@ -2057,8 +2057,8 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background:rgb(111,124,45);
-		color: #fff;
+		background:rgb(111,124,45,0.3);
+		color: rgb(111,124,45);
 		text-align: center;
 		border-radius: 0.5em;
 		text-decoration: none;
