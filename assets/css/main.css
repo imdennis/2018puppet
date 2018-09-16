@@ -84,7 +84,7 @@ input, select, textarea {
 
 	body {
 		/* background: #f0f4f4; */
-		background-color: rgb(238, 229, 207);
+		background-color: rgb(255, 221, 121);
 
 		color: #5b5b5b;
 		font-size: 15pt;
@@ -1937,7 +1937,7 @@ input, select, textarea {
 			}
 
 				ul.icons li a:hover {
-					color: #ef8376;
+					color: rgb(255, 136, 0);
 				}
 
 /* Form */
@@ -2057,8 +2057,8 @@ input, select, textarea {
 	.button {
 		position: relative;
 		display: inline-block;
-		background:rgb(111,124,45,0.3);
-		color: rgb(111,124,45);
+		/* background:rgb(255,255,255); */
+		color: rgb(255,191,0);
 		text-align: center;
 		border-radius: 0.5em;
 		text-decoration: none;
@@ -2079,7 +2079,7 @@ input, select, textarea {
 		button:hover,
 		.button:hover {
 			color: #fff;
-			background:rgb(129, 145, 54);
+			background:rgb(255, 191, 0);
 		}
 
 		input[type="button"].alt,
@@ -2163,8 +2163,8 @@ input, select, textarea {
 
 	#header {
 		/* position: relative; */
-		background-image: url("../../images/banner-01.jpg");
-		background-color: rgb(238,229,207);
+		background-image: url("../../images/site/header.jpg");
+		background-color:#FFBF00;
 		background-size:contain;
 		background-position: center center;
 		/* background-attachment: fixed; */
@@ -2245,7 +2245,7 @@ input, select, textarea {
 
 		body.homepage #header:after {
 			content: '';
-			background: rgb(111,124,45);
+			background: rgb(255,191,0);
 			display: block;
 			position: absolute;
 			left: 0;
@@ -2292,7 +2292,7 @@ input, select, textarea {
 			border-right: solid 1px rgba(192, 192, 192, 0.35);
 		}
 
-			#nav > ul:before, #nav > ul:after {
+			#nav > ul:before, #nav > ul:after{
 				content: '';
 				display: block;
 				width: 300%;
@@ -2326,7 +2326,7 @@ input, select, textarea {
 				transition: color 0.35s ease-in-out, border-color 0.35s ease-in-out;
 			}
 
-				#nav > ul > li.active {
+				#nav > ul > li.active{
 					border-color: rgba(192, 192, 192, 0.35);
 				}
 
@@ -2451,7 +2451,7 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 6em 0 6em 0;
 		/* background: rgb(55, 63, 21); */
-		background: rgb(238, 229, 207);
+		background: #FFBF00;
 		color: #fff;
 	}
 

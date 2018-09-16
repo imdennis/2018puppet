@@ -33,7 +33,18 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+
+
+
 		});
+
+
+	// Slides.
+		$window.on('load', function(){
+			$('.flexslider').flexslider({
+				animation: "slide"
+			});
+		})
 
 	// Dropdowns.
 		$('#nav > ul').dropotron({
