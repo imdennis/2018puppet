@@ -41,6 +41,7 @@
 
 	// Slides.
 		$window.on('load', function(){
+			console.log('%c 都來看程式碼了 來我的github按個星星吧!  https://github.com/imdennis/2018puppet ', 'background: #222; color: #bada55');
 			$('.flexslider').flexslider({
 				animation: "slide"
 			});
