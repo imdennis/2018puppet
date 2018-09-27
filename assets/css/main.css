@@ -2165,6 +2165,26 @@ input, select, textarea {
 			padding-top: 0;
 		}
 
+/* Video Wrapper*/
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 55%;
+		/* 16:9 */
+		padding-top: 25px;
+		height: 0;
+	}
+
+	.videoWrapper iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		padding: 1%;
+		padding: 1%;
+	}
+
+
 /* Header */
 
 	#header {
