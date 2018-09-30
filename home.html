@@ -82,7 +82,7 @@
 		</section>
 
 		<div class="wrapper style2">
-			<article id="main" class="container" >
+			<article id="main" class="container">
 				<div id="calendar"></div>
 			</article>
 
@@ -275,13 +275,14 @@
 
 			$('#calendar').fullCalendar({
 				themeSystem: 'standard',
+				contentHeight: 'auto',
 				header: {
 					left: 'prev',
 					center: 'title',
 					right: 'next'
 					// right: 'month,agendaWeek,agendaDay,listMonth'
 				},
-				
+
 				// defaultDate: Moment,
 				weekNumbers: false,
 				navLinks: false, // can click day/week names to navigate views
